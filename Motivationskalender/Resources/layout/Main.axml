@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="350.0dp"
+        android:id="@+id/calendarView" />
+    <TextView
+        android:text="Calender Display"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDisplay" />
+    <GridLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout1"
+        android:rowCount="2"
+        android:columnCount="3">
+        <CheckBox
+            android:text="Träning"
+            android:id="@+id/workoutCheckBox" />
+        <CheckBox
+            android:text="Sjukgymn."
+            android:id="@+id/physicalTherapyCheckBox" />
+        <CheckBox
+            android:text="Alkoholfri"
+            android:id="@+id/alcoholFreeCheckBox" />
+        <CheckBox
+            android:text="Köttfri"
+            android:id="@+id/vegoCheckBox" />
+        <CheckBox
+            android:text="5 frukt &amp; grönt"
+            android:id="@+id/fruitsCheckBox" />
+    </GridLayout>
+    <TextView
+        android:text="Välmående: 5"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/healthTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center" />
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/healthSeekBar"
+        android:max="10"
+        android:progress="5" />
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lockSwitch" />
+    <Button
+        android:text="Spara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveButton"
+        android:visibility="invisible" />
+</LinearLayout>
