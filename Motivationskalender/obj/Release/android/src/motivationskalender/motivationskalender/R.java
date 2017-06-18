@@ -23,7 +23,8 @@ public final class R {
         public static final int healthTextView=0x7f050008;
         public static final int lockSwitch=0x7f05000a;
         public static final int physicalTherapyCheckBox=0x7f050004;
-        public static final int saveButton=0x7f05000b;
+        public static final int saveButton=0x7f05000c;
+        public static final int sumButton=0x7f05000b;
         public static final int txtDisplay=0x7f050001;
         public static final int vegoCheckBox=0x7f050006;
         public static final int workoutCheckBox=0x7f050003;

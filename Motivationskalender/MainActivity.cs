@@ -16,11 +16,10 @@ namespace Motivationskalender
     protected override void OnCreate(Bundle bundle)
     {
       base.OnCreate(bundle);
-
-      // Set our view from the "main" layout resource
-      SetContentView (Resource.Layout.Main);
+      SetContentView(Resource.Layout.Main);
       var calenderView = FindViewById<CalendarView>(Resource.Id.calendarView);
       var txtDisplay = FindViewById<TextView>(Resource.Id.txtDisplay);
+      Button sumButton = FindViewById<Button>(Resource.Id.sumButton);
       Button saveButton = FindViewById<Button>(Resource.Id.saveButton);
       CheckBox workoutCheckbox = FindViewById<CheckBox>(Resource.Id.workoutCheckBox);
       CheckBox physicalTherapyCheckbox = FindViewById<CheckBox>(Resource.Id.physicalTherapyCheckBox);
@@ -38,6 +37,7 @@ namespace Motivationskalender
       int year = Int32.Parse(toYear.Format(today));
       int month = Int32.Parse(toMonth.Format(today));
       int day = Int32.Parse(toDay.Format(today));
+      int nbOfWeeks = 0;
       checkButtonVisibility(year, month, day);
       String selectedDate = sdf.Format(today);
       DateTime selectedDateTime = new DateTime(year, month, day, 0, 0, 0);
@@ -194,9 +194,54 @@ namespace Motivationskalender
           healthSeekBar.Enabled = true;
         }
       };
+      sumButton.Click += delegate
+      {        // setup the alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.SetTitle("Summering");
+        builder.SetMessage(sum());
+
+        // add a button
+        builder.SetPositiveButton("Close", (senderAlert, args) => { });
+
+        // create and show the alert dialog
+        AlertDialog dialog = builder.Create();
+        dialog.Show();
+      };
 
       saveButton.Click += delegate
-      {
+    {
+      string msg = sum();
+      AlertDialog.Builder alert = new AlertDialog.Builder(this);
+      alert.SetTitle("Skicka mail");
+      alert.SetMessage(msg + "\n" + "Vill du skicka iväg summeringen?");
+      alert.SetPositiveButton("Ja", (senderAlert, args) => {
+        var email = new Intent(Android.Content.Intent.ActionSend);
+        email.PutExtra(Android.Content.Intent.ExtraEmail,
+        new string[] { "annjohansson87@gmail.com" });
+          //email.PutExtra(Android.Content.Intent.ExtraCc,
+          //new string[] { "person3@xamarin.com" });
+          email.PutExtra(Android.Content.Intent.ExtraSubject, "Resultat Motivationskalender " + selectedDate);
+        email.PutExtra(Android.Content.Intent.ExtraText, msg);
+        email.SetType("message/rfc822");
+        StartActivity(email);
+      });
+
+      alert.SetNegativeButton("Abryt", (senderAlert, args) => {
+        Toast.MakeText(this, "Ej skickad", ToastLength.Short).Show();
+      });
+
+      Dialog dialog = alert.Create();
+      dialog.Show();
+    };
+
+      void checkButtonVisibility(int y, int m, int d) {
+        if (d == DateTime.DaysInMonth(y, m))
+          saveButton.Visibility = Android.Views.ViewStates.Visible;
+        else
+          saveButton.Visibility = Android.Views.ViewStates.Invisible;
+      }  
+
+      string sum() {
         string dateString;
         int workoutCtr = 0;
         int physTherCtr = 0;
@@ -215,68 +260,41 @@ namespace Motivationskalender
           if (savedFruitsMain.GetBoolean(dateString, false)) fruitCtr += 1;
           healthCtr += savedHealthMain.GetInt(dateString, 5);
         }
-        money = workoutCtr * 50 + physTherCtr * 20 + vegoCtr * 50 + fruitCtr * 20 + getAlcoholFreeMoney();
+        int alcoMoney = getAlcoholFreeMoney();
+        money = workoutCtr * 50 + physTherCtr * 20 + vegoCtr * 50 + fruitCtr * 20 + alcoMoney;
 
         int getAlcoholFreeMoney()
         {
-          if (alcoCtr == DateTime.DaysInMonth(year, month)) return 1000;
+          nbOfWeeks = 0;
+          if (alcoCtr == DateTime.DaysInMonth(year, month)) nbOfWeeks = 5;
           else
           {
-            int nbOfWeeks = 0;
-            var firstDayOfMonth = new DateTime(year, month, 1);
-            var dayOfWeek = firstDayOfMonth.DayOfWeek;
-            if (dayOfWeek == DayOfWeek.Monday)
+            int ctr = 0;
+            foreach (DateTime date in AllDatesInMonth(year, month))
             {
-              //foreach (DateTime date in AllDatesInMonth(year, month))
-              //{
-              //  int ctr = 0;
-              //  if (savedAlcoholFreeMain.GetBoolean(dateString, false)) ctr += 1;
-
-              //}
+              dateString = date.ToString("d'/'M'/'yyyy");
+              if (savedAlcoholFreeMain.GetBoolean(dateString, false)) ctr += 1;
+              else ctr = 0;
+              if (ctr == 7)
+              {
+                nbOfWeeks += 1;
+                ctr = 0;
+              }
             }
-            return 200*nbOfWeeks;
           }
+          return 200 * nbOfWeeks;
         }
 
-        string result = $"Träningspass: {workoutCtr} \nSjukgymnastik pass: {physTherCtr} \n" +
-                         $"Köttfritt: {vegoCtr} \nAlkoholfritt: {alcoCtr} \n" +
-                         $"5 frukt och grönt: {fruitCtr} \nGenomsnittligt välmående: {healthCtr / DateTime.DaysInMonth(year, month)}";
-
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.SetTitle("Summering");
-        alert.SetMessage(result + "\n" + "Vill du skicka iväg summeringen?");
-        
-
-        
-        alert.SetPositiveButton("Ja", (senderAlert, args) => {
-          var email = new Intent(Android.Content.Intent.ActionSend);
-          email.PutExtra(Android.Content.Intent.ExtraEmail,
-          new string[] { "annjohansson87@gmail.com" });
-          //email.PutExtra(Android.Content.Intent.ExtraCc,
-          //new string[] { "person3@xamarin.com" });
-          email.PutExtra(Android.Content.Intent.ExtraSubject, "Resultat Motivationskalender " + selectedDate);
-          email.PutExtra(Android.Content.Intent.ExtraText, result);
-          email.SetType("message/rfc822");
-          StartActivity(email);
-        });
-
-        alert.SetNegativeButton("Abryt", (senderAlert, args) => {
-          Toast.MakeText(this, "Ej skickad", ToastLength.Short).Show();
-        });
-
-
-        Dialog dialog = alert.Create();
-        dialog.Show();
-      };
-
-      void checkButtonVisibility(int y, int m, int d) {
-        if (d == DateTime.DaysInMonth(y, m))
-          saveButton.Visibility = Android.Views.ViewStates.Visible;
-        else
-          saveButton.Visibility = Android.Views.ViewStates.Invisible;
+        string result = $"Träningspass: {workoutCtr} st ({workoutCtr * 50} kr)  \n" +
+                        $"Sjukgymnastik pass: {physTherCtr} st ({physTherCtr * 20} kr)\n" +
+                        $"Köttfritt: {vegoCtr} st ({vegoCtr * 20} kr)\n" +
+                        $"Alkoholfri: {alcoCtr} dagar/{nbOfWeeks} veckor ({alcoMoney} kr)\n" +
+                        $"5 frukt och grönt: {fruitCtr} st ({physTherCtr * 20} kr)\n" +
+                        $"Genomsnittligt välmående: {healthCtr / DateTime.DaysInMonth(year, month)}\n" +
+                        $"Summa: {money} kr";
+        return result;
       }
     }
-
     public static IEnumerable<DateTime> AllDatesInMonth(int year, int month)
     {
       int days = DateTime.DaysInMonth(year, month);
