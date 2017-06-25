@@ -9,6 +9,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:label="Statistik" android:name="md5c1c42d71e961d71f9055e85e01070e56.StatisticsActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="Motivationskalender.Motivationskalender.mono.MonoRuntimeProvider.__mono_init__" />
   </application>
 </manifest>

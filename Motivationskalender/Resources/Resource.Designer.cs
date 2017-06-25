@@ -75,20 +75,20 @@ namespace Motivationskalender
 			// aapt resource value: 0x7f050002
 			public const int gridLayout1 = 2131034114;
 			
-			// aapt resource value: 0x7f050009
-			public const int healthSeekBar = 2131034121;
-			
-			// aapt resource value: 0x7f050008
-			public const int healthTextView = 2131034120;
-			
 			// aapt resource value: 0x7f05000a
-			public const int lockSwitch = 2131034122;
+			public const int healthSeekBar = 2131034122;
+			
+			// aapt resource value: 0x7f050009
+			public const int healthTextView = 2131034121;
 			
 			// aapt resource value: 0x7f050004
 			public const int physicalTherapyCheckBox = 2131034116;
 			
 			// aapt resource value: 0x7f05000c
 			public const int saveButton = 2131034124;
+			
+			// aapt resource value: 0x7f050008
+			public const int statisticsButton = 2131034120;
 			
 			// aapt resource value: 0x7f05000b
 			public const int sumButton = 2131034123;

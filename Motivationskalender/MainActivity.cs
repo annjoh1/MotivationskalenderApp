@@ -19,6 +19,7 @@ namespace Motivationskalender
       SetContentView(Resource.Layout.Main);
       var calenderView = FindViewById<CalendarView>(Resource.Id.calendarView);
       var txtDisplay = FindViewById<TextView>(Resource.Id.txtDisplay);
+      Button statisticsButton = FindViewById<Button>(Resource.Id.statisticsButton);
       Button sumButton = FindViewById<Button>(Resource.Id.sumButton);
       Button saveButton = FindViewById<Button>(Resource.Id.saveButton);
       CheckBox workoutCheckbox = FindViewById<CheckBox>(Resource.Id.workoutCheckBox);
@@ -26,7 +27,7 @@ namespace Motivationskalender
       CheckBox vegoCheckbox = FindViewById<CheckBox>(Resource.Id.vegoCheckBox);
       CheckBox alcoholFreeCheckbox = FindViewById<CheckBox>(Resource.Id.alcoholFreeCheckBox);
       CheckBox fruitsCheckbox = FindViewById<CheckBox>(Resource.Id.fruitsCheckBox);
-      Switch lockSwitch = FindViewById<Switch>(Resource.Id.lockSwitch);
+      //Switch lockSwitch = FindViewById<Switch>(Resource.Id.lockSwitch);
       TextView healthTextView = FindViewById<TextView>(Resource.Id.healthTextView);
       SeekBar healthSeekBar = FindViewById<SeekBar>(Resource.Id.healthSeekBar);
       SimpleDateFormat sdf = new SimpleDateFormat("d/M/yyyy");
@@ -87,28 +88,28 @@ namespace Motivationskalender
         vegoCheckbox.Checked = vegoBool ? true : false;
         alcoholFreeCheckbox.Checked = alcoholFreeBool ? true : false;
         fruitsCheckbox.Checked = fruitsBool ? true : false;
-        lockSwitch.Checked = lockBool ? true : false;
+        //lockSwitch.Checked = lockBool ? true : false;
         healthSeekBar.Progress = health;
         healthTextView.Text = string.Format("Välmående: {0}", health);
-        bool locks = lockSwitch.Checked;
-        if (locks)
-        {
-          workoutCheckbox.Enabled = false;
-          physicalTherapyCheckbox.Enabled = false;
-          vegoCheckbox.Enabled = false;
-          alcoholFreeCheckbox.Enabled = false;
-          fruitsCheckbox.Enabled = false;
-          healthSeekBar.Enabled = false;
-        }
-        else
-        {
-          workoutCheckbox.Enabled = true;
-          physicalTherapyCheckbox.Enabled = true;
-          vegoCheckbox.Enabled = true;
-          alcoholFreeCheckbox.Enabled = true;
-          fruitsCheckbox.Enabled = true;
-          healthSeekBar.Enabled = true;
-        }
+        //bool locks = lockSwitch.Checked;
+        //if (locks)
+        //{
+        //  workoutCheckbox.Enabled = false;
+        //  physicalTherapyCheckbox.Enabled = false;
+        //  vegoCheckbox.Enabled = false;
+        //  alcoholFreeCheckbox.Enabled = false;
+        //  fruitsCheckbox.Enabled = false;
+        //  healthSeekBar.Enabled = false;
+        //}
+        //else
+        //{
+        //  workoutCheckbox.Enabled = true;
+        //  physicalTherapyCheckbox.Enabled = true;
+        //  vegoCheckbox.Enabled = true;
+        //  alcoholFreeCheckbox.Enabled = true;
+        //  fruitsCheckbox.Enabled = true;
+        //  healthSeekBar.Enabled = true;
+        //}
       }
 
       healthSeekBar.ProgressChanged += (object sender, SeekBar.ProgressChangedEventArgs e) => {
@@ -168,42 +169,45 @@ namespace Motivationskalender
         savedFruitsEdit.Commit();
       };
 
-      lockSwitch.Click += delegate
+      //lockSwitch.Click += delegate
+      //{
+      //  bool locks = lockSwitch.Checked;
+      //  var savedLocks = Application.Context.GetSharedPreferences("SavedLocks", FileCreationMode.Private);
+      //  var savedLocksEdit = savedLocks.Edit();
+      //  savedLocksEdit.PutBoolean(selectedDate, locks);
+      //  savedLocksEdit.Commit();
+      //  if (locks)
+      //  {
+      //    workoutCheckbox.Enabled = false;
+      //    physicalTherapyCheckbox.Enabled = false;
+      //    vegoCheckbox.Enabled = false;
+      //    alcoholFreeCheckbox.Enabled = false;
+      //    fruitsCheckbox.Enabled = false;
+      //    healthSeekBar.Enabled = false;
+      //  }
+      //  else
+      //  {
+      //    workoutCheckbox.Enabled = true;
+      //    physicalTherapyCheckbox.Enabled = true;
+      //    vegoCheckbox.Enabled = true;
+      //    alcoholFreeCheckbox.Enabled = true;
+      //    fruitsCheckbox.Enabled = true;
+      //    healthSeekBar.Enabled = true;
+      //  }
+      //};
+
+      statisticsButton.Click += (sender, e) =>
       {
-        bool locks = lockSwitch.Checked;
-        var savedLocks = Application.Context.GetSharedPreferences("SavedLocks", FileCreationMode.Private);
-        var savedLocksEdit = savedLocks.Edit();
-        savedLocksEdit.PutBoolean(selectedDate, locks);
-        savedLocksEdit.Commit();
-        if (locks)
-        {
-          workoutCheckbox.Enabled = false;
-          physicalTherapyCheckbox.Enabled = false;
-          vegoCheckbox.Enabled = false;
-          alcoholFreeCheckbox.Enabled = false;
-          fruitsCheckbox.Enabled = false;
-          healthSeekBar.Enabled = false;
-        }
-        else
-        {
-          workoutCheckbox.Enabled = true;
-          physicalTherapyCheckbox.Enabled = true;
-          vegoCheckbox.Enabled = true;
-          alcoholFreeCheckbox.Enabled = true;
-          fruitsCheckbox.Enabled = true;
-          healthSeekBar.Enabled = true;
-        }
+        var intent = new Intent(this, typeof(StatisticsActivity));
+        StartActivity(intent);
       };
+
       sumButton.Click += delegate
-      {        // setup the alert builder
+      {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.SetTitle("Summering");
         builder.SetMessage(sum());
-
-        // add a button
-        builder.SetPositiveButton("Close", (senderAlert, args) => { });
-
-        // create and show the alert dialog
+        builder.SetPositiveButton("Stäng", (senderAlert, args) => { });
         AlertDialog dialog = builder.Create();
         dialog.Show();
       };
@@ -286,9 +290,9 @@ namespace Motivationskalender
         }
 
         string result = $"Träningspass: {workoutCtr} st ({workoutCtr * 50} kr)  \n" +
-                        $"Sjukgymnastik pass: {physTherCtr} st ({physTherCtr * 20} kr)\n" +
-                        $"Köttfritt: {vegoCtr} st ({vegoCtr * 20} kr)\n" +
-                        $"Alkoholfri: {alcoCtr} dagar/{nbOfWeeks} veckor ({alcoMoney} kr)\n" +
+                        $"Sjukgymn.: {physTherCtr} st ({physTherCtr * 20} kr)\n" +
+                        $"Köttfri: {vegoCtr} st ({vegoCtr * 20} kr)\n" +
+                        $"Alkoholfri: {alcoCtr}d / {nbOfWeeks}v ({alcoMoney} kr)\n" +
                         $"5 frukt och grönt: {fruitCtr} st ({physTherCtr * 20} kr)\n" +
                         $"Genomsnittligt välmående: {healthCtr / DateTime.DaysInMonth(year, month)}\n" +
                         $"Summa: {money} kr";
