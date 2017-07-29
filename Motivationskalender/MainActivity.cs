@@ -7,6 +7,12 @@ using Java.Text;
 using Java.Sql;
 using System.Collections.Generic;
 using System.Net.Mail;
+using Android.Support.V4.App;
+using TaskStackBuilder = Android.Support.V4.App.TaskStackBuilder;
+using Motivationskalender.BroadCast;
+using Android.Icu.Util;
+using System.IO;
+using Android.Content.Res;
 
 namespace Motivationskalender
 {
@@ -14,20 +20,19 @@ namespace Motivationskalender
   public class MainActivity : Activity
   {
     protected override void OnCreate(Bundle bundle)
-    {
+    {            
       base.OnCreate(bundle);
       SetContentView(Resource.Layout.Main);
       var calenderView = FindViewById<CalendarView>(Resource.Id.calendarView);
       var txtDisplay = FindViewById<TextView>(Resource.Id.txtDisplay);
       Button statisticsButton = FindViewById<Button>(Resource.Id.statisticsButton);
       Button sumButton = FindViewById<Button>(Resource.Id.sumButton);
-      Button saveButton = FindViewById<Button>(Resource.Id.saveButton);
+      Button closeButton = FindViewById<Button>(Resource.Id.closeButton);
       CheckBox workoutCheckbox = FindViewById<CheckBox>(Resource.Id.workoutCheckBox);
       CheckBox physicalTherapyCheckbox = FindViewById<CheckBox>(Resource.Id.physicalTherapyCheckBox);
       CheckBox vegoCheckbox = FindViewById<CheckBox>(Resource.Id.vegoCheckBox);
       CheckBox alcoholFreeCheckbox = FindViewById<CheckBox>(Resource.Id.alcoholFreeCheckBox);
       CheckBox fruitsCheckbox = FindViewById<CheckBox>(Resource.Id.fruitsCheckBox);
-      //Switch lockSwitch = FindViewById<Switch>(Resource.Id.lockSwitch);
       TextView healthTextView = FindViewById<TextView>(Resource.Id.healthTextView);
       SeekBar healthSeekBar = FindViewById<SeekBar>(Resource.Id.healthSeekBar);
       SimpleDateFormat sdf = new SimpleDateFormat("d/M/yyyy");
@@ -39,9 +44,24 @@ namespace Motivationskalender
       int month = Int32.Parse(toMonth.Format(today));
       int day = Int32.Parse(toDay.Format(today));
       int nbOfWeeks = 0;
-      checkButtonVisibility(year, month, day);
+      bool lastDayOfMonth = (day == DateTime.DaysInMonth(year, month));
+      //checkButtonVisibility(year, month, day);
       String selectedDate = sdf.Format(today);
       DateTime selectedDateTime = new DateTime(year, month, day, 0, 0, 0);
+      //string compliments;
+      List<string> compliments = new List<string>();
+      AssetManager assets = this.Assets;
+      using (StreamReader sr = new StreamReader(assets.Open("Compliments.txt")))
+      {
+        string compliment = sr.ReadLine();
+        while (compliment != null)
+        {
+          compliments.Add(compliment);
+          compliment = sr.ReadLine();
+        }
+      }
+
+      Random rnd = new Random();
 
       var savedWorkoutMain = Application.Context.GetSharedPreferences("SavedWorkout", FileCreationMode.Private);
       var savedPhysicalTherapyMain = Application.Context.GetSharedPreferences("SavedPhysicalTherapy", FileCreationMode.Private);
@@ -58,6 +78,24 @@ namespace Motivationskalender
       bool fruitsBool = savedFruitsMain.GetBoolean(selectedDate, false);
       bool lockBool = savedLocksMain.GetBoolean(selectedDate, false);
       int health = savedHealthMain.GetInt(selectedDate, 0);
+
+      bool alarmUp = (PendingIntent.GetBroadcast(this, 0,
+        new Intent(this, typeof(AlarmNotificationReceiver)),
+        PendingIntentFlags.NoCreate) != null);
+
+      if (!alarmUp)
+      {
+        AlarmManager manager = (AlarmManager)GetSystemService(Context.AlarmService);
+        Intent myIntent;
+        PendingIntent pendingIntent;
+        myIntent = new Intent(this, typeof(AlarmNotificationReceiver));
+        pendingIntent = PendingIntent.GetBroadcast(this, 0, myIntent, 0);
+        Java.Util.Calendar calendar = Java.Util.Calendar.Instance;
+        calendar.Set(Java.Util.CalendarField.HourOfDay, 20);
+        calendar.Set(Java.Util.CalendarField.Minute, 14);
+        manager.SetRepeating(AlarmType.RtcWakeup, calendar.TimeInMillis, AlarmManager.IntervalDay, pendingIntent);
+      }
+
       updateViews();
 
       calenderView.DateChange += (s, e) =>
@@ -72,7 +110,7 @@ namespace Motivationskalender
       {
         selectedDate = day.ToString() + "/" + month.ToString() + "/" + year.ToString();
         selectedDateTime = new DateTime(year, month, day, 0, 0, 0);
-        checkButtonVisibility(year, month, day);
+        //checkButtonVisibility(year, month, day);
 
         txtDisplay.Text = selectedDate;
         workoutBool = savedWorkoutMain.GetBoolean(selectedDate, false);
@@ -88,28 +126,8 @@ namespace Motivationskalender
         vegoCheckbox.Checked = vegoBool ? true : false;
         alcoholFreeCheckbox.Checked = alcoholFreeBool ? true : false;
         fruitsCheckbox.Checked = fruitsBool ? true : false;
-        //lockSwitch.Checked = lockBool ? true : false;
         healthSeekBar.Progress = health;
         healthTextView.Text = string.Format("Välmående: {0}", health);
-        //bool locks = lockSwitch.Checked;
-        //if (locks)
-        //{
-        //  workoutCheckbox.Enabled = false;
-        //  physicalTherapyCheckbox.Enabled = false;
-        //  vegoCheckbox.Enabled = false;
-        //  alcoholFreeCheckbox.Enabled = false;
-        //  fruitsCheckbox.Enabled = false;
-        //  healthSeekBar.Enabled = false;
-        //}
-        //else
-        //{
-        //  workoutCheckbox.Enabled = true;
-        //  physicalTherapyCheckbox.Enabled = true;
-        //  vegoCheckbox.Enabled = true;
-        //  alcoholFreeCheckbox.Enabled = true;
-        //  fruitsCheckbox.Enabled = true;
-        //  healthSeekBar.Enabled = true;
-        //}
       }
 
       healthSeekBar.ProgressChanged += (object sender, SeekBar.ProgressChangedEventArgs e) => {
@@ -127,6 +145,7 @@ namespace Motivationskalender
       workoutCheckbox.Click += delegate
       {
         bool workout = workoutCheckbox.Checked;
+        showCompliment(workout);
         var savedWorkout = Application.Context.GetSharedPreferences("SavedWorkout", FileCreationMode.Private);
         var savedWorkoutEdit = savedWorkout.Edit();
         savedWorkoutEdit.PutBoolean(selectedDate, workout);
@@ -136,6 +155,7 @@ namespace Motivationskalender
       physicalTherapyCheckbox.Click += delegate
       {
         bool physicalTherapy = physicalTherapyCheckbox.Checked;
+        showCompliment(physicalTherapy);
         var savedPhysicalTherapy = Application.Context.GetSharedPreferences("SavedPhysicalTherapy", FileCreationMode.Private);
         var savedPhysicalTherapyEdit = savedPhysicalTherapy.Edit();
         savedPhysicalTherapyEdit.PutBoolean(selectedDate, physicalTherapy);
@@ -145,6 +165,7 @@ namespace Motivationskalender
       vegoCheckbox.Click += delegate
       {
         bool vego = vegoCheckbox.Checked;
+        showCompliment(vego);
         var savedVego = Application.Context.GetSharedPreferences("SavedVego", FileCreationMode.Private);
         var savedVegoEdit = savedVego.Edit();
         savedVegoEdit.PutBoolean(selectedDate, vego);
@@ -154,6 +175,7 @@ namespace Motivationskalender
       alcoholFreeCheckbox.Click += delegate
       {
         bool alcoholFree = alcoholFreeCheckbox.Checked;
+        showCompliment(alcoholFree);
         var savedAlcoholFree = Application.Context.GetSharedPreferences("SavedAlcoholFree", FileCreationMode.Private);
         var savedAlcoholFreeEdit = savedAlcoholFree.Edit();
         savedAlcoholFreeEdit.PutBoolean(selectedDate, alcoholFree);
@@ -163,87 +185,68 @@ namespace Motivationskalender
       fruitsCheckbox.Click += delegate
       {
         bool fruits = fruitsCheckbox.Checked;
+        showCompliment(fruits);
         var savedFruits = Application.Context.GetSharedPreferences("SavedFruits", FileCreationMode.Private);
         var savedFruitsEdit = savedFruits.Edit();
         savedFruitsEdit.PutBoolean(selectedDate, fruits);
         savedFruitsEdit.Commit();
       };
-
-      //lockSwitch.Click += delegate
-      //{
-      //  bool locks = lockSwitch.Checked;
-      //  var savedLocks = Application.Context.GetSharedPreferences("SavedLocks", FileCreationMode.Private);
-      //  var savedLocksEdit = savedLocks.Edit();
-      //  savedLocksEdit.PutBoolean(selectedDate, locks);
-      //  savedLocksEdit.Commit();
-      //  if (locks)
-      //  {
-      //    workoutCheckbox.Enabled = false;
-      //    physicalTherapyCheckbox.Enabled = false;
-      //    vegoCheckbox.Enabled = false;
-      //    alcoholFreeCheckbox.Enabled = false;
-      //    fruitsCheckbox.Enabled = false;
-      //    healthSeekBar.Enabled = false;
-      //  }
-      //  else
-      //  {
-      //    workoutCheckbox.Enabled = true;
-      //    physicalTherapyCheckbox.Enabled = true;
-      //    vegoCheckbox.Enabled = true;
-      //    alcoholFreeCheckbox.Enabled = true;
-      //    fruitsCheckbox.Enabled = true;
-      //    healthSeekBar.Enabled = true;
-      //  }
-      //};
-
+      
       statisticsButton.Click += (sender, e) =>
       {
-        var intent = new Intent(this, typeof(StatisticsActivity));
-        StartActivity(intent);
+        //Bundle valuesSend = new Bundle();
+        //valuesSend.PutString("sendContent","Testa notification");
+        //var intent = new Intent(this, typeof(StatisticsActivity));
+        //intent.PutExtras(valuesSend);
+        //StartActivity(intent);
       };
 
       sumButton.Click += delegate
       {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.SetTitle("Summering");
-        builder.SetMessage(sum());
-        builder.SetPositiveButton("Stäng", (senderAlert, args) => { });
-        AlertDialog dialog = builder.Create();
-        dialog.Show();
-      };
-
-      saveButton.Click += delegate
-    {
-      string msg = sum();
-      AlertDialog.Builder alert = new AlertDialog.Builder(this);
-      alert.SetTitle("Skicka mail");
-      alert.SetMessage(msg + "\n" + "Vill du skicka iväg summeringen?");
-      alert.SetPositiveButton("Ja", (senderAlert, args) => {
-        var email = new Intent(Android.Content.Intent.ActionSend);
-        email.PutExtra(Android.Content.Intent.ExtraEmail,
-        new string[] { "annjohansson87@gmail.com" });
+        string msg = sum();
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.SetTitle("Summering");
+        alert.SetMessage(msg + "\n" + "Vill du skicka iväg summeringen?");
+        alert.SetPositiveButton("Ja", (senderAlert, args) => {
+          var email = new Intent(Android.Content.Intent.ActionSend);
+          email.PutExtra(Android.Content.Intent.ExtraEmail,
+          new string[] { "annjohansson87@gmail.com" });
           //email.PutExtra(Android.Content.Intent.ExtraCc,
           //new string[] { "person3@xamarin.com" });
           email.PutExtra(Android.Content.Intent.ExtraSubject, "Resultat Motivationskalender " + selectedDate);
-        email.PutExtra(Android.Content.Intent.ExtraText, msg);
-        email.SetType("message/rfc822");
-        StartActivity(email);
-      });
+          email.PutExtra(Android.Content.Intent.ExtraText, msg);
+          email.SetType("message/rfc822");
+          StartActivity(email);
+        });
 
-      alert.SetNegativeButton("Abryt", (senderAlert, args) => {
-        Toast.MakeText(this, "Ej skickad", ToastLength.Short).Show();
-      });
+        alert.SetNegativeButton("Avbryt", (senderAlert, args) => {
+          Toast.MakeText(this, "Ej skickad", ToastLength.Short).Show();
+        });
 
-      Dialog dialog = alert.Create();
-      dialog.Show();
-    };
+        Dialog dialog = alert.Create();
+        dialog.Show();
+      };
 
-      void checkButtonVisibility(int y, int m, int d) {
-        if (d == DateTime.DaysInMonth(y, m))
-          saveButton.Visibility = Android.Views.ViewStates.Visible;
-        else
-          saveButton.Visibility = Android.Views.ViewStates.Invisible;
-      }  
+      closeButton.Click += delegate
+      {
+        this.FinishAffinity();
+      };
+
+      //void checkButtonVisibility(int y, int m, int d) {
+      //  if (d == DateTime.DaysInMonth(y, m))
+      //    closeButton.Visibility = Android.Views.ViewStates.Visible;
+      //  else
+      //    closeButton.Visibility = Android.Views.ViewStates.Invisible;
+      //}  
+
+      void showCompliment(bool show)
+      {
+        if (show)
+        {
+          int index = rnd.Next(compliments.Count);
+          Toast.MakeText(this, compliments[index], ToastLength.Short).Show();
+        }
+      };
 
       string sum() {
         string dateString;

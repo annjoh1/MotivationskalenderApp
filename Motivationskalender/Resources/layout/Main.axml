@@ -20,22 +20,27 @@
         android:layout_height="wrap_content"
         android:id="@+id/gridLayout1"
         android:rowCount="2"
-        android:columnCount="3">
+        android:columnCount="5">
         <CheckBox
-            android:text="Träning"
+            android:drawableLeft="@drawable/Barbell40"
             android:id="@+id/workoutCheckBox" />
+    <!--android:text="Träning"-->
         <CheckBox
-            android:text="Sjukgymn."
+            android:drawableLeft="@drawable/PhysicalTherapy40"
             android:id="@+id/physicalTherapyCheckBox" />
+    <!--android:text="Sjukgymn."-->
         <CheckBox
-            android:text="Alkoholfri"
+            android:drawableLeft="@drawable/NoAlcohol40"
             android:id="@+id/alcoholFreeCheckBox" />
+    <!--android:text="Alkoholfri"-->
         <CheckBox
-            android:text="Köttfri"
+            android:drawableLeft="@drawable/Steak40"
             android:id="@+id/vegoCheckBox" />
+    <!--android:text="Köttfri"-->
         <CheckBox
-            android:text="5 frukt &amp; grönt"
+            android:drawableLeft="@drawable/Apple40"
             android:id="@+id/fruitsCheckBox" />
+    <!--android:text="5 frukt &amp; grönt"-->
     </GridLayout>
     <Button
         android:layout_width="wrap_content"
@@ -45,7 +50,8 @@
         android:layout_gravity="left"
         android:text="Statistik"
         android:layout_height="wrap_content"
-        android:foreground="@android:color/white" />
+        android:visibility="visible" />
+<!--android:foreground="@android:color/white"-->
     <TextView
         android:text="Välmående: 5"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -60,10 +66,6 @@
         android:id="@+id/healthSeekBar"
         android:max="10"
         android:progress="5" />
-<!--<Switch
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lockSwitch" />-->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -75,11 +77,11 @@
             android:id="@+id/sumButton"
             android:layout_weight="2" />
         <Button
-            android:text="Skicka"
+            android:text="Avsluta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/saveButton"
-            android:visibility="invisible"
+            android:id="@+id/closeButton"
+            android:visibility="visible"
             android:layout_weight="2" />
     </LinearLayout>
 </LinearLayout>
