@@ -36,6 +36,16 @@ namespace Motivationskalender.BroadCast
       PendingIntent resultPendingIntent =
           stackBuilder.GetPendingIntent(0, (int)PendingIntentFlags.UpdateCurrent);
 
+
+      DateTime thisDay = DateTime.Today;
+      bool lastDayOfMonth = (thisDay.Day == DateTime.DaysInMonth(thisDay.Year, thisDay.Month));
+      string notificationText;
+      notificationText = "Fyll i!";
+      if (lastDayOfMonth)
+      {
+        notificationText = "Fyll i och skicka iväg!";
+      }
+
       NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
       builder.SetAutoCancel(true)
         .SetDefaults((int)NotificationDefaults.All)
@@ -43,7 +53,7 @@ namespace Motivationskalender.BroadCast
         .SetSmallIcon(Resource.Drawable.Icon)
         .SetContentTitle("Motivationskalender")
         .SetSmallIcon(Resource.Drawable.ic_launcher)
-        .SetContentText("Fyll i!");
+        .SetContentText(notificationText);
 
       NotificationManager manager = (NotificationManager)context.GetSystemService(Context.NotificationService);
       manager.Notify(1, builder.Build());

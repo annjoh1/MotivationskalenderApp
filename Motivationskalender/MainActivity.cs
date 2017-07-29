@@ -13,6 +13,7 @@ using Motivationskalender.BroadCast;
 using Android.Icu.Util;
 using System.IO;
 using Android.Content.Res;
+using Android.Media;
 
 namespace Motivationskalender
 {
@@ -48,7 +49,6 @@ namespace Motivationskalender
       //checkButtonVisibility(year, month, day);
       String selectedDate = sdf.Format(today);
       DateTime selectedDateTime = new DateTime(year, month, day, 0, 0, 0);
-      //string compliments;
       List<string> compliments = new List<string>();
       AssetManager assets = this.Assets;
       using (StreamReader sr = new StreamReader(assets.Open("Compliments.txt")))
@@ -62,6 +62,8 @@ namespace Motivationskalender
       }
 
       Random rnd = new Random();
+      MediaPlayer player;
+      player = MediaPlayer.Create(this, Resource.Raw.achievement);
 
       var savedWorkoutMain = Application.Context.GetSharedPreferences("SavedWorkout", FileCreationMode.Private);
       var savedPhysicalTherapyMain = Application.Context.GetSharedPreferences("SavedPhysicalTherapy", FileCreationMode.Private);
@@ -245,6 +247,7 @@ namespace Motivationskalender
         {
           int index = rnd.Next(compliments.Count);
           Toast.MakeText(this, compliments[index], ToastLength.Short).Show();
+          player.Start();
         }
       };
 
@@ -302,6 +305,7 @@ namespace Motivationskalender
         return result;
       }
     }
+    
     public static IEnumerable<DateTime> AllDatesInMonth(int year, int month)
     {
       int days = DateTime.DaysInMonth(year, month);

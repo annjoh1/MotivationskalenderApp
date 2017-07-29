@@ -76,3 +76,5 @@ C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Rel
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\noalcohol40.png
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\physicaltherapy40.png
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\steak40.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\raw\success.mp3
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\raw\achievement.mp3
