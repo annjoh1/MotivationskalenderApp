@@ -80,3 +80,5 @@ C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Rel
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\sad30.png
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\happy30.png
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\XbdMerge\Xamarin.Android.Support.Vector.Drawable.dll.stamp
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\settings30.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\layout\settingsactivity.xml

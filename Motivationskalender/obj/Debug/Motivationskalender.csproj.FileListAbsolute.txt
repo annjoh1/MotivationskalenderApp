@@ -80,3 +80,7 @@ C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Deb
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\raw\achievement.mp3
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\drawable\sad30.png
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\drawable\happy30.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\layout\settingsactivity.xml
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\drawable\settings30.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\drawable\return100.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\drawable\return40.png

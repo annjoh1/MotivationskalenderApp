@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
     <CalendarView
         android:layout_width="match_parent"
-        android:layout_height="350.0dp"
+        android:layout_height="300.0dp"
         android:id="@+id/calendarView" />
     <TextView
         android:text="Calender Display"
@@ -25,25 +25,19 @@
         <CheckBox
             android:drawableLeft="@drawable/Barbell40"
             android:id="@+id/workoutCheckBox" />
-    <!--android:text="Träning"-->
         <CheckBox
             android:drawableLeft="@drawable/PhysicalTherapy40"
             android:id="@+id/physicalTherapyCheckBox" />
-    <!--android:text="Sjukgymn."-->
         <CheckBox
             android:drawableLeft="@drawable/NoAlcohol40"
             android:id="@+id/alcoholFreeCheckBox" />
-    <!--android:text="Alkoholfri"-->
         <CheckBox
             android:drawableLeft="@drawable/Steak40"
             android:id="@+id/vegoCheckBox" />
-    <!--android:text="Köttfri"-->
         <CheckBox
             android:drawableLeft="@drawable/Apple40"
             android:id="@+id/fruitsCheckBox" />
-    <!--android:text="5 frukt &amp; grönt"-->
     </GridLayout>
-<!--android:foreground="@android:color/white"-->
     <TextView
         android:text="Välmående: 5"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -87,6 +81,12 @@
         android:text="Statistik"
         android:layout_height="wrap_content"
         android:visibility="gone" />
+    <ImageButton
+        android:src="@drawable/settings30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settingsButton"
+        android:layout_gravity="right" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"

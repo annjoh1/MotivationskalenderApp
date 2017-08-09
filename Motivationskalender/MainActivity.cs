@@ -27,6 +27,7 @@ namespace Motivationskalender
       var calenderView = FindViewById<CalendarView>(Resource.Id.calendarView);
       var txtDisplay = FindViewById<TextView>(Resource.Id.txtDisplay);
       Button statisticsButton = FindViewById<Button>(Resource.Id.statisticsButton);
+      ImageButton settingsButton = FindViewById<ImageButton>(Resource.Id.settingsButton);
       Button sumButton = FindViewById<Button>(Resource.Id.sumButton);
       Button closeButton = FindViewById<Button>(Resource.Id.closeButton);
       CheckBox workoutCheckbox = FindViewById<CheckBox>(Resource.Id.workoutCheckBox);
@@ -72,6 +73,7 @@ namespace Motivationskalender
       var savedFruitsMain = Application.Context.GetSharedPreferences("SavedFruits", FileCreationMode.Private);
       var savedLocksMain = Application.Context.GetSharedPreferences("SavedLocks", FileCreationMode.Private);
       var savedHealthMain = Application.Context.GetSharedPreferences("SavedHealth", FileCreationMode.Private);
+      var savedSettings = Application.Context.GetSharedPreferences("SavedSettings", FileCreationMode.Private);
 
       bool workoutBool = savedWorkoutMain.GetBoolean(selectedDate, false);
       bool physicalTherapyBool = savedPhysicalTherapyMain.GetBoolean(selectedDate, false);
@@ -80,6 +82,9 @@ namespace Motivationskalender
       bool fruitsBool = savedFruitsMain.GetBoolean(selectedDate, false);
       bool lockBool = savedLocksMain.GetBoolean(selectedDate, false);
       int health = savedHealthMain.GetInt(selectedDate, 0);
+      string mail = savedSettings.GetString("mail", "googlemail@gmail.com");
+      int hour = savedSettings.GetInt("hour", 20);
+      int minute = savedSettings.GetInt("minute", 30);
 
       bool alarmUp = (PendingIntent.GetBroadcast(this, 0,
         new Intent(this, typeof(AlarmNotificationReceiver)),
@@ -93,8 +98,8 @@ namespace Motivationskalender
         myIntent = new Intent(this, typeof(AlarmNotificationReceiver));
         pendingIntent = PendingIntent.GetBroadcast(this, 0, myIntent, 0);
         Java.Util.Calendar calendar = Java.Util.Calendar.Instance;
-        calendar.Set(Java.Util.CalendarField.HourOfDay, 20);
-        calendar.Set(Java.Util.CalendarField.Minute, 14);
+        calendar.Set(Java.Util.CalendarField.HourOfDay, hour);
+        calendar.Set(Java.Util.CalendarField.Minute, minute);
         manager.SetRepeating(AlarmType.RtcWakeup, calendar.TimeInMillis, AlarmManager.IntervalDay, pendingIntent);
       }
 
@@ -204,6 +209,15 @@ namespace Motivationskalender
         //StartActivity(intent);
       };
 
+      settingsButton.Click += (sender, e) =>
+      {
+        Bundle valuesSend = new Bundle();
+        valuesSend.PutString("sendContent","Testa notification");
+        var intent = new Intent(this, typeof(SettingsActivity));
+        intent.PutExtras(valuesSend);
+        StartActivity(intent);
+      };
+
       sumButton.Click += delegate
       {
         string msg = sum();
@@ -211,9 +225,10 @@ namespace Motivationskalender
         alert.SetTitle("Summering");
         alert.SetMessage(msg + "\n" + "Vill du skicka iväg summeringen?");
         alert.SetPositiveButton("Ja", (senderAlert, args) => {
+          mail = savedSettings.GetString("mail", "googlemail@gmail.com");
           var email = new Intent(Android.Content.Intent.ActionSend);
           email.PutExtra(Android.Content.Intent.ExtraEmail,
-          new string[] { "annjohansson87@gmail.com" });
+          new string[] {mail});
           //email.PutExtra(Android.Content.Intent.ExtraCc,
           //new string[] { "person3@xamarin.com" });
           email.PutExtra(Android.Content.Intent.ExtraSubject, "Resultat Motivationskalender " + selectedDate);
