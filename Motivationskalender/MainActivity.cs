@@ -141,6 +141,7 @@ namespace Motivationskalender
           var savedHealthEdit = savedHealth.Edit();
           savedHealthEdit.PutInt(selectedDate, healthValue);
           savedHealthEdit.Commit();
+          player.Start();
         }
       };
 

@@ -12,7 +12,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtDisplay" />
+        android:id="@+id/txtDisplay"
+        android:visibility="visible" />
     <GridLayout
         android:minWidth="25px"
         android:minHeight="25px"
@@ -50,13 +51,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textAlignment="center" />
-    <SeekBar
-        android:id="@+id/healthSeekBar"
-        android:max="10"
-        android:progress="5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textAlignment="center"
+        android:visibility="visible" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/Sad30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sadImageView"
+            android:layout_gravity="left" />
+        <SeekBar
+            android:id="@+id/healthSeekBar"
+            android:max="10"
+            android:progress="5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:soundEffectsEnabled="true"
+            android:layout_weight="3" />
+        <ImageView
+            android:src="@drawable/Happy30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sadImageView"
+            android:layout_gravity="right" />
+    </LinearLayout>
     <Button
         android:layout_width="wrap_content"
         android:id="@+id/statisticsButton"
@@ -65,7 +86,7 @@
         android:layout_gravity="left"
         android:text="Statistik"
         android:layout_height="wrap_content"
-        android:visibility="visible" />
+        android:visibility="gone" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"

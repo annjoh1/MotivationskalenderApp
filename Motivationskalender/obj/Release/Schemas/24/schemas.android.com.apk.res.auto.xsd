@@ -2,7 +2,7 @@
 <xs:schema xmlns:app="http://schemas.android.com/apk/res-auto" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res-auto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v24</xs:documentation>
-    <xs:documentation>2017-07-29 22:28:41</xs:documentation>
+    <xs:documentation>2017-07-30 00:57:29</xs:documentation>
   </xs:annotation>
   <xs:attribute name="allowStacking">
     <xs:annotation>
@@ -370,6 +370,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -389,6 +390,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -824,6 +826,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -843,6 +846,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -1173,6 +1177,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -1192,6 +1197,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -1522,6 +1528,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -1541,6 +1548,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -3203,6 +3211,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -3222,6 +3231,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -3552,6 +3562,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -3571,6 +3582,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -3983,6 +3995,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -4002,6 +4015,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -4568,6 +4582,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -4587,6 +4602,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -4917,6 +4933,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -4936,6 +4953,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -6229,6 +6247,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -6248,6 +6267,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -6639,6 +6659,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -6658,6 +6679,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -6988,6 +7010,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -7007,6 +7030,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -7427,6 +7451,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -7446,6 +7471,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -7998,6 +8024,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -8017,6 +8044,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:color/background_dark" />
@@ -8425,6 +8453,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -8444,6 +8473,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -8960,6 +8990,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -8979,6 +9010,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -9495,6 +9527,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -9514,6 +9547,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -9844,6 +9878,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -9863,6 +9898,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -10275,6 +10311,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -10294,6 +10331,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -11109,6 +11147,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -11128,6 +11167,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -11540,6 +11580,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -11559,6 +11600,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -11971,6 +12013,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -11990,6 +12033,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -12569,6 +12613,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -12588,6 +12633,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -13097,6 +13143,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -13116,6 +13163,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -13965,6 +14013,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -13984,6 +14033,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -14314,6 +14364,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -14333,6 +14384,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -14842,6 +14894,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -14861,6 +14914,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -15377,6 +15431,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -15396,6 +15451,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -15808,6 +15864,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -15827,6 +15884,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -16343,6 +16401,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -16362,6 +16421,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -17050,6 +17110,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -17069,6 +17130,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -17399,6 +17461,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -17418,6 +17481,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -19761,6 +19825,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -19780,6 +19845,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -21881,6 +21947,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -21900,6 +21967,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -22416,6 +22484,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -22435,6 +22504,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -22765,6 +22835,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -22784,6 +22855,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
@@ -23364,6 +23436,7 @@
             <xs:enumeration value="@drawable/design_ic_visibility_off" />
             <xs:enumeration value="@drawable/design_password_eye" />
             <xs:enumeration value="@drawable/design_snackbar_background" />
+            <xs:enumeration value="@drawable/happy30" />
             <xs:enumeration value="@drawable/ic_launcher" />
             <xs:enumeration value="@drawable/icon" />
             <xs:enumeration value="@drawable/navigation_empty_icon" />
@@ -23383,6 +23456,7 @@
             <xs:enumeration value="@drawable/notify_panel_notification_icon_bg" />
             <xs:enumeration value="@drawable/physicaltherapy" />
             <xs:enumeration value="@drawable/physicaltherapy40" />
+            <xs:enumeration value="@drawable/sad30" />
             <xs:enumeration value="@drawable/steak" />
             <xs:enumeration value="@drawable/steak40" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />

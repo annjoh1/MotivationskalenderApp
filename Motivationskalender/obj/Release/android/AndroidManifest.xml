@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Motivationskalender.Motivationskalender" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
-  <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="24" />
-  <application android:label="Motivationskalender" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon">
+  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="23" />
+  <application android:label="Motivationskalender" android:theme="@android:style/Theme.Holo.Light" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon">
     <activity android:icon="@drawable/icon" android:label="Motivationskalender" android:name="md5c1c42d71e961d71f9055e85e01070e56.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

@@ -60,7 +60,6 @@ C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Rel
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\XbdMerge\Xamarin.Android.Support.Transition.dll.stamp
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\XbdMerge\Xamarin.Android.Support.v4.dll.stamp
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\XbdMerge\Xamarin.Android.Support.v7.RecyclerView.dll.stamp
-C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\XbdMerge\Xamarin.Android.Support.Vector.Drawable.dll.stamp
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\XbdMerge\Xamarin.Android.Support.Animated.Vector.Drawable.dll.stamp
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\XbdMerge\Xamarin.Android.Support.v7.AppCompat.dll.stamp
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\XbdMerge\Xamarin.Android.Support.Design.dll.stamp
@@ -78,3 +77,6 @@ C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Rel
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\steak40.png
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\raw\success.mp3
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\raw\achievement.mp3
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\sad30.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\happy30.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\XbdMerge\Xamarin.Android.Support.Vector.Drawable.dll.stamp

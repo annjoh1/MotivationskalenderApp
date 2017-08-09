@@ -76,3 +76,7 @@ C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Deb
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\uploadflags.txt
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\bin\Debug\Motivationskalender.dll.mdb
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\android\assets\Motivationskalender.dll.mdb
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\raw\success.mp3
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\raw\achievement.mp3
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\drawable\sad30.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Debug\res\drawable\happy30.png
