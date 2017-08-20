@@ -2,7 +2,7 @@
 <xs:schema xmlns:tools="http://schemas.android.com/tools" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/tools" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v24</xs:documentation>
-    <xs:documentation>2017-08-09 22:53:24</xs:documentation>
+    <xs:documentation>2017-08-19 20:26:50</xs:documentation>
   </xs:annotation>
   <xs:attribute name="layout">
     <xs:annotation>

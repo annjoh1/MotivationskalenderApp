@@ -18,11 +18,13 @@ using Android.Media;
 namespace Motivationskalender
 {
   [Activity(Label = "Motivationskalender", MainLauncher = true, Icon = "@drawable/icon")]
-  public class MainActivity : Activity
+  public class MainActivity : Activity 
   {
+    public static bool sound;
     protected override void OnCreate(Bundle bundle)
     {            
       base.OnCreate(bundle);
+      Context context = ApplicationContext;
       SetContentView(Resource.Layout.Main);
       var calenderView = FindViewById<CalendarView>(Resource.Id.calendarView);
       var txtDisplay = FindViewById<TextView>(Resource.Id.txtDisplay);
@@ -47,7 +49,6 @@ namespace Motivationskalender
       int day = Int32.Parse(toDay.Format(today));
       int nbOfWeeks = 0;
       bool lastDayOfMonth = (day == DateTime.DaysInMonth(year, month));
-      //checkButtonVisibility(year, month, day);
       String selectedDate = sdf.Format(today);
       DateTime selectedDateTime = new DateTime(year, month, day, 0, 0, 0);
       List<string> compliments = new List<string>();
@@ -74,6 +75,7 @@ namespace Motivationskalender
       var savedLocksMain = Application.Context.GetSharedPreferences("SavedLocks", FileCreationMode.Private);
       var savedHealthMain = Application.Context.GetSharedPreferences("SavedHealth", FileCreationMode.Private);
       var savedSettings = Application.Context.GetSharedPreferences("SavedSettings", FileCreationMode.Private);
+      var savedSettingsEdit = savedSettings.Edit();
 
       bool workoutBool = savedWorkoutMain.GetBoolean(selectedDate, false);
       bool physicalTherapyBool = savedPhysicalTherapyMain.GetBoolean(selectedDate, false);
@@ -82,26 +84,10 @@ namespace Motivationskalender
       bool fruitsBool = savedFruitsMain.GetBoolean(selectedDate, false);
       bool lockBool = savedLocksMain.GetBoolean(selectedDate, false);
       int health = savedHealthMain.GetInt(selectedDate, 0);
-      string mail = savedSettings.GetString("mail", "googlemail@gmail.com");
-      int hour = savedSettings.GetInt("hour", 20);
-      int minute = savedSettings.GetInt("minute", 30);
+      string mail = savedSettings.GetString("mail", "");
+      sound = savedSettings.GetBoolean("sound", true);
 
-      bool alarmUp = (PendingIntent.GetBroadcast(this, 0,
-        new Intent(this, typeof(AlarmNotificationReceiver)),
-        PendingIntentFlags.NoCreate) != null);
-
-      if (!alarmUp)
-      {
-        AlarmManager manager = (AlarmManager)GetSystemService(Context.AlarmService);
-        Intent myIntent;
-        PendingIntent pendingIntent;
-        myIntent = new Intent(this, typeof(AlarmNotificationReceiver));
-        pendingIntent = PendingIntent.GetBroadcast(this, 0, myIntent, 0);
-        Java.Util.Calendar calendar = Java.Util.Calendar.Instance;
-        calendar.Set(Java.Util.CalendarField.HourOfDay, hour);
-        calendar.Set(Java.Util.CalendarField.Minute, minute);
-        manager.SetRepeating(AlarmType.RtcWakeup, calendar.TimeInMillis, AlarmManager.IntervalDay, pendingIntent);
-      }
+      Alarm.CheckAlarm(this);
 
       updateViews();
 
@@ -112,12 +98,11 @@ namespace Motivationskalender
         day = e.DayOfMonth;
         updateViews();
       };
-
+      
       void updateViews()
       {
         selectedDate = day.ToString() + "/" + month.ToString() + "/" + year.ToString();
         selectedDateTime = new DateTime(year, month, day, 0, 0, 0);
-        //checkButtonVisibility(year, month, day);
 
         txtDisplay.Text = selectedDate;
         workoutBool = savedWorkoutMain.GetBoolean(selectedDate, false);
@@ -146,7 +131,8 @@ namespace Motivationskalender
           var savedHealthEdit = savedHealth.Edit();
           savedHealthEdit.PutInt(selectedDate, healthValue);
           savedHealthEdit.Commit();
-          player.Start();
+          if(sound)
+            player.Start();
         }
       };
 
@@ -225,7 +211,7 @@ namespace Motivationskalender
         alert.SetTitle("Summering");
         alert.SetMessage(msg + "\n" + "Vill du skicka iväg summeringen?");
         alert.SetPositiveButton("Ja", (senderAlert, args) => {
-          mail = savedSettings.GetString("mail", "googlemail@gmail.com");
+          mail = savedSettings.GetString("mail", "");
           var email = new Intent(Android.Content.Intent.ActionSend);
           email.PutExtra(Android.Content.Intent.ExtraEmail,
           new string[] {mail});
@@ -249,21 +235,15 @@ namespace Motivationskalender
       {
         this.FinishAffinity();
       };
-
-      //void checkButtonVisibility(int y, int m, int d) {
-      //  if (d == DateTime.DaysInMonth(y, m))
-      //    closeButton.Visibility = Android.Views.ViewStates.Visible;
-      //  else
-      //    closeButton.Visibility = Android.Views.ViewStates.Invisible;
-      //}  
-
+      
       void showCompliment(bool show)
       {
         if (show)
         {
           int index = rnd.Next(compliments.Count);
           Toast.MakeText(this, compliments[index], ToastLength.Short).Show();
-          player.Start();
+          if (sound)
+            player.Start();
         }
       };
 
@@ -321,7 +301,27 @@ namespace Motivationskalender
         return result;
       }
     }
-    
+
+
+    public static void ToggleSound(ImageButton button)
+    {
+      var savedSettings = Application.Context.GetSharedPreferences("SavedSettings", FileCreationMode.Private);
+      var savedSettingsEdit = savedSettings.Edit();
+      sound = savedSettings.GetBoolean("sound", true);
+      if (sound)
+      {
+        button.SetImageResource(Resource.Drawable.NoAudio30);
+        sound = false;
+      }
+      else
+      {
+        button.SetImageResource(Resource.Drawable.Audio30);
+        sound = true;
+      }
+      savedSettingsEdit.PutBoolean("sound", sound);
+      savedSettingsEdit.Commit();
+    }
+
     public static IEnumerable<DateTime> AllDatesInMonth(int year, int month)
     {
       int days = DateTime.DaysInMonth(year, month);

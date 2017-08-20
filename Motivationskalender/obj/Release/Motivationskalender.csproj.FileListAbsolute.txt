@@ -82,3 +82,8 @@ C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Rel
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\XbdMerge\Xamarin.Android.Support.Vector.Drawable.dll.stamp
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\settings30.png
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\layout\settingsactivity.xml
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\return100.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\return40.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\audio30.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\noaudio30.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\saveclose40.png

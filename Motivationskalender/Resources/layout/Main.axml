@@ -89,8 +89,9 @@
         android:layout_gravity="right" />
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:id="@+id/linearLayoutButtons"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
         <Button
             android:text="Summering"
             android:layout_width="wrap_content"
