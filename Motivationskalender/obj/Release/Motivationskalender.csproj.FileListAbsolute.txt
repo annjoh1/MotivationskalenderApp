@@ -87,3 +87,4 @@ C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Rel
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\audio30.png
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\noaudio30.png
 C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\saveclose40.png
+C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\res\drawable\calculator40.png

@@ -90,20 +90,23 @@
     <LinearLayout
         android:orientation="horizontal"
         android:id="@+id/linearLayoutButtons"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom">
         <Button
             android:text="Summering"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sumButton"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            android:layout_gravity="bottom" />
         <Button
             android:text="Avsluta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/closeButton"
             android:visibility="visible"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            android:layout_gravity="bottom" />
     </LinearLayout>
 </LinearLayout>

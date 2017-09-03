@@ -87,6 +87,12 @@ namespace Motivationskalender
       string mail = savedSettings.GetString("mail", "");
       sound = savedSettings.GetBoolean("sound", true);
 
+      int fruitWorth = 20;
+      int physicalTherapyWorth = 20;
+      int workoutWorth = 50;
+      int vegoWorth = 50;
+      int alcoWorth = 200;
+
       Alarm.CheckAlarm(this);
 
       updateViews();
@@ -210,6 +216,7 @@ namespace Motivationskalender
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.SetTitle("Summering");
         alert.SetMessage(msg + "\n" + "Vill du skicka iväg summeringen?");
+        alert.SetIcon(Resource.Drawable.Calculator40);
         alert.SetPositiveButton("Ja", (senderAlert, args) => {
           mail = savedSettings.GetString("mail", "");
           var email = new Intent(Android.Content.Intent.ActionSend);
@@ -267,7 +274,7 @@ namespace Motivationskalender
           healthCtr += savedHealthMain.GetInt(dateString, 5);
         }
         int alcoMoney = getAlcoholFreeMoney();
-        money = workoutCtr * 50 + physTherCtr * 20 + vegoCtr * 50 + fruitCtr * 20 + alcoMoney;
+        money = workoutCtr * workoutWorth + physTherCtr * physicalTherapyWorth + vegoCtr * vegoWorth + fruitCtr * fruitWorth + alcoMoney;
 
         int getAlcoholFreeMoney()
         {
@@ -288,14 +295,14 @@ namespace Motivationskalender
               }
             }
           }
-          return 200 * nbOfWeeks;
+          return alcoWorth * nbOfWeeks;
         }
 
-        string result = $"Träningspass: {workoutCtr} st ({workoutCtr * 50} kr)  \n" +
-                        $"Sjukgymn.: {physTherCtr} st ({physTherCtr * 20} kr)\n" +
-                        $"Köttfri: {vegoCtr} st ({vegoCtr * 20} kr)\n" +
+        string result = $"Träningspass: {workoutCtr} st ({workoutCtr * workoutWorth} kr)  \n" +
+                        $"Sjukgymn.: {physTherCtr} st ({physTherCtr * physicalTherapyWorth} kr)\n" +
+                        $"Köttfri: {vegoCtr} st ({vegoCtr * vegoWorth} kr)\n" +
                         $"Alkoholfri: {alcoCtr}d / {nbOfWeeks}v ({alcoMoney} kr)\n" +
-                        $"5 frukt och grönt: {fruitCtr} st ({physTherCtr * 20} kr)\n" +
+                        $"5 frukt och grönt: {fruitCtr} st ({fruitCtr * fruitWorth} kr)\n" +
                         $"Genomsnittligt välmående: {healthCtr / DateTime.DaysInMonth(year, month)}\n" +
                         $"Summa: {money} kr";
         return result;

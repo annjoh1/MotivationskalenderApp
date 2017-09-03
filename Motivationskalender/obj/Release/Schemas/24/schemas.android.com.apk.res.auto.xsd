@@ -2,7 +2,7 @@
 <xs:schema xmlns:app="http://schemas.android.com/apk/res-auto" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res-auto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v24</xs:documentation>
-    <xs:documentation>2017-08-20 19:07:24</xs:documentation>
+    <xs:documentation>2017-08-22 22:12:27</xs:documentation>
   </xs:annotation>
   <xs:attribute name="allowStacking">
     <xs:annotation>
@@ -365,6 +365,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -827,6 +828,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -1184,6 +1186,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -1541,6 +1544,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -3230,6 +3234,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -3587,6 +3592,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -4026,6 +4032,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -4619,6 +4626,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -4976,6 +4984,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -6296,6 +6305,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -6714,6 +6724,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -7071,6 +7082,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -7518,6 +7530,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -8097,6 +8110,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -8532,6 +8546,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -9075,6 +9090,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -9618,6 +9634,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -9975,6 +9992,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -10414,6 +10432,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -11256,6 +11275,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -11695,6 +11715,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -12134,6 +12155,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -12740,6 +12762,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -13276,6 +13299,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -14152,6 +14176,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -14509,6 +14534,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -15045,6 +15071,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -15588,6 +15615,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -16027,6 +16055,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -16570,6 +16599,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -17285,6 +17315,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -17642,6 +17673,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -20012,6 +20044,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -22140,6 +22173,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -22683,6 +22717,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -23040,6 +23075,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
@@ -23647,6 +23683,7 @@
             <xs:enumeration value="@drawable/avd_show_password" />
             <xs:enumeration value="@drawable/barbell" />
             <xs:enumeration value="@drawable/barbell40" />
+            <xs:enumeration value="@drawable/calculator40" />
             <xs:enumeration value="@drawable/design_bottom_navigation_item_background" />
             <xs:enumeration value="@drawable/design_fab_background" />
             <xs:enumeration value="@drawable/design_ic_visibility" />
