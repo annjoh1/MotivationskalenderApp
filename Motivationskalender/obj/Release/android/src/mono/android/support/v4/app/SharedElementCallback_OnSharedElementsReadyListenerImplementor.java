@@ -13,15 +13,15 @@ public class SharedElementCallback_OnSharedElementsReadyListenerImplementor
 		__md_methods = 
 			"n_onSharedElementsReady:()V:GetOnSharedElementsReadyHandler:Android.Support.V4.App.SharedElementCallback/IOnSharedElementsReadyListenerInvoker, Xamarin.Android.Support.Compat\n" +
 			"";
-		mono.android.Runtime.register ("Android.Support.V4.App.SharedElementCallback+IOnSharedElementsReadyListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", SharedElementCallback_OnSharedElementsReadyListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Support.V4.App.SharedElementCallback+IOnSharedElementsReadyListenerImplementor, Xamarin.Android.Support.Compat", SharedElementCallback_OnSharedElementsReadyListenerImplementor.class, __md_methods);
 	}
 
 
-	public SharedElementCallback_OnSharedElementsReadyListenerImplementor () throws java.lang.Throwable
+	public SharedElementCallback_OnSharedElementsReadyListenerImplementor ()
 	{
 		super ();
 		if (getClass () == SharedElementCallback_OnSharedElementsReadyListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Support.V4.App.SharedElementCallback+IOnSharedElementsReadyListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Support.V4.App.SharedElementCallback+IOnSharedElementsReadyListenerImplementor, Xamarin.Android.Support.Compat", "", this, new java.lang.Object[] {  });
 	}
 
 

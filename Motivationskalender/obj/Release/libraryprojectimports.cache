@@ -1,18 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <Jars></Jars>
+  <Jars>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\1\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\10\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\11\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\12\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\13\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\2\jl\support-annotations.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\3\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\4\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\5\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\6\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\7\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\8\jl\classes.jar</Jar>
+    <Jar>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\9\jl\classes.jar</Jar>
+  </Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\__library_projects__\Xamarin.Android.Support.Design\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\__library_projects__\Xamarin.Android.Support.Transition\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\__library_projects__\Xamarin.Android.Support.v7.AppCompat\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\__library_projects__\Xamarin.Android.Support.v7.RecyclerView\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\6\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\9\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\11\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\12\jl\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories />
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\__library_projects__\Xamarin.Android.Support.Design.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\__library_projects__\Xamarin.Android.Support.Transition.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\__library_projects__\Xamarin.Android.Support.v7.AppCompat.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\Ann\Documents\GitHub\MotivationskalenderApp\Motivationskalender\obj\Release\__library_projects__\Xamarin.Android.Support.v7.RecyclerView.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\6.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\9.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\11.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\annjo\Source\Repos\MotivationskalenderApp\Motivationskalender\obj\Release\lp\12.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

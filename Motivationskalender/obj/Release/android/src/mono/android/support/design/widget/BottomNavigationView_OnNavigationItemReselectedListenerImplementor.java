@@ -13,15 +13,15 @@ public class BottomNavigationView_OnNavigationItemReselectedListenerImplementor
 		__md_methods = 
 			"n_onNavigationItemReselected:(Landroid/view/MenuItem;)V:GetOnNavigationItemReselected_Landroid_view_MenuItem_Handler:Android.Support.Design.Widget.BottomNavigationView/IOnNavigationItemReselectedListenerInvoker, Xamarin.Android.Support.Design\n" +
 			"";
-		mono.android.Runtime.register ("Android.Support.Design.Widget.BottomNavigationView+IOnNavigationItemReselectedListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", BottomNavigationView_OnNavigationItemReselectedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Support.Design.Widget.BottomNavigationView+IOnNavigationItemReselectedListenerImplementor, Xamarin.Android.Support.Design", BottomNavigationView_OnNavigationItemReselectedListenerImplementor.class, __md_methods);
 	}
 
 
-	public BottomNavigationView_OnNavigationItemReselectedListenerImplementor () throws java.lang.Throwable
+	public BottomNavigationView_OnNavigationItemReselectedListenerImplementor ()
 	{
 		super ();
 		if (getClass () == BottomNavigationView_OnNavigationItemReselectedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Support.Design.Widget.BottomNavigationView+IOnNavigationItemReselectedListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Support.Design.Widget.BottomNavigationView+IOnNavigationItemReselectedListenerImplementor, Xamarin.Android.Support.Design", "", this, new java.lang.Object[] {  });
 	}
 
 
