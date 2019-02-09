@@ -72,14 +72,15 @@
             android:id="@+id/sadImageView"
             android:layout_gravity="right" />
     </LinearLayout>
-    <Button
-        android:layout_width="wrap_content"
-        android:id="@+id/statisticsButton"
-        android:layout_marginBottom="0.0dp"
-        android:layout_marginLeft="0.0dp"
-        android:layout_gravity="left"
-        android:text="Statistik"
-        android:layout_height="wrap_content"/>
+	<Button
+		android:layout_width="wrap_content"
+		android:id="@+id/statisticsButton"
+		android:layout_marginBottom="0.0dp"
+		android:layout_marginLeft="0.0dp"
+		android:layout_gravity="left"
+		android:text="Statistik"
+		android:layout_height="wrap_content"
+		android:visibility="gone" />
     <ImageButton
         android:src="@drawable/settings30"
         android:layout_width="wrap_content"
