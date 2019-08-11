@@ -198,9 +198,9 @@ namespace Motivationskalender
             {
                 //Bundle valuesSend = new Bundle();
                 //valuesSend.PutString("sendContent","Testa notification");
-                //var intent = new Intent(this, typeof(StatisticsActivity));
+                var intent = new Intent(this, typeof(StatisticsActivity));
                 //intent.PutExtras(valuesSend);
-                //StartActivity(intent);
+                StartActivity(intent);
             };
 
             void CreateNotificationChannel()

@@ -26,6 +26,7 @@ namespace Motivationskalender
 		
 		public static void UpdateIdValues()
 		{
+			global::Microcharts.Droid.Resource.String.library_name = global::Motivationskalender.Resource.String.library_name;
 		}
 		
 		public partial class Animation
@@ -2501,6 +2502,9 @@ namespace Motivationskalender
 			// aapt resource value: 0x7f080047
 			public const int center_vertical = 2131230791;
 			
+			// aapt resource value: 0x7f0800c2
+			public const int chartView = 2131230914;
+			
 			// aapt resource value: 0x7f080073
 			public const int checkbox = 2131230835;
 			
@@ -2885,9 +2889,6 @@ namespace Motivationskalender
 			// aapt resource value: 0x7f080069
 			public const int textSpacerNoTitle = 2131230825;
 			
-			// aapt resource value: 0x7f0800c2
-			public const int textView = 2131230914;
-			
 			// aapt resource value: 0x7f080098
 			public const int text_input_password_toggle = 2131230872;
 			
@@ -3246,11 +3247,11 @@ namespace Motivationskalender
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f090028
-			public const int ApplicationName = 2131296296;
+			// aapt resource value: 0x7f090029
+			public const int ApplicationName = 2131296297;
 			
-			// aapt resource value: 0x7f090027
-			public const int Hello = 2131296295;
+			// aapt resource value: 0x7f090028
+			public const int Hello = 2131296296;
 			
 			// aapt resource value: 0x7f090000
 			public const int abc_action_bar_home_description = 2131296256;
@@ -3347,6 +3348,9 @@ namespace Motivationskalender
 			
 			// aapt resource value: 0x7f090020
 			public const int character_counter_pattern = 2131296288;
+			
+			// aapt resource value: 0x7f090027
+			public const int library_name = 2131296295;
 			
 			// aapt resource value: 0x7f090021
 			public const int password_toggle_content_description = 2131296289;

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xamarin.motivationskalender" android:versionName="1.6" android:installLocation="auto" android:versionCode="6">
-	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="27" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xamarin.motivationskalender" android:versionName="1.9" android:installLocation="auto" android:versionCode="9">
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="28" />
 	<application android:label="Motivationskalender" android:theme="@android:style/Theme.Holo.Light" android:icon="@drawable/Icon"></application>
 </manifest>
